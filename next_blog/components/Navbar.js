@@ -8,9 +8,12 @@ const Navbar = ({ toggleMode, icon }) => {
   return (
     <nav className="transition duration-800 flex border-solid border-pink-600 border-b shadow-2xl items-center justify-between flex-wrap bg-white dark:bg-black p-6">
       <div className="flex items-center flex-shrink-0 text-pink-600 ml-6">
-        <span className="font-light lg:text-5xl text-xl tracking-tight">
+        <Link href="/" as={`/`}>
+
+        <a className="font-light lg:text-5xl text-xl tracking-tight">
           DailyJS.
-        </span>
+        </a>
+        </Link>
       </div>
       <div className="block mr-6">
         <button
@@ -43,17 +46,17 @@ const Navbar = ({ toggleMode, icon }) => {
               Blog
             </a>
           </Link>
-          <Link href="/posts" as={`/posts`}>
+          <Link href="/aboutme" as={`/aboutme`}>
             <a
-              href={`/posts`}
+              href={`/aboutme`}
               className="block font-light mt-4 text-pink-600 hover:text-pink-800 mr-4"
             >
               O mnie
             </a>
           </Link>
-          <Link href="/posts" as={`/posts`}>
+          <Link href="/contact" as={`/contact`}>
             <a
-              href={`/posts`}
+              href={`/contact`}
               className="block font-light mt-4 text-pink-600 hover:text-pink-800 mr-4"
             >
               Kontakt

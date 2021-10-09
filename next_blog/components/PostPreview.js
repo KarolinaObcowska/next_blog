@@ -16,9 +16,9 @@ const PostPreview = ({ post: { title, description, author, date } }) => (
 )
 
 PostPreview.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  author: PropTypes.string,
+  date: PropTypes.string,
 }
 export default PostPreview

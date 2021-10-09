@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import Navbar from '../../components/Navbar'
 const Post = ({ post: { title, date, author, content } }) => (
+  <>
+  <Navbar />
   <div sx={{ width: '33%', p: 2 }}>
     <div sx={{ variant: 'containers.card' }}>
       <h1>{title}</h1>
@@ -11,12 +13,13 @@ const Post = ({ post: { title, date, author, content } }) => (
       <p>{content}</p>
     </div>
   </div>
+  </>
 )
 Post.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  content: PropTypes.string,
+  author: PropTypes.string,
+  date: PropTypes.string,
 }
 
 export default Post

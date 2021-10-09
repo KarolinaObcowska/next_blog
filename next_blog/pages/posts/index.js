@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-
+import Navbar from '../../components/Navbar'
 const Posts = ({ posts }) => (
-  <div>
+  <>
+    <Navbar />
     {posts.map((post) => (
       <div key={post.id} sx={{ width: '33%', p: 2 }}>
         <Link key={post.id} href="/posts/[id]" as={`/posts/${post.id}`}>
@@ -20,10 +21,10 @@ const Posts = ({ posts }) => (
         </Link>
       </div>
     ))}
-  </div>
+  </>
 )
 Posts.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  posts: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default Posts
