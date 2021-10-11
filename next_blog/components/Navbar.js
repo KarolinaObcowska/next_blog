@@ -7,7 +7,7 @@ const Navbar = ({ toggleMode, icon }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   
   return (
-    <nav className="fixed top-0 flex border-solid border-pink-600 border-b shadow-xl md:px-28 items-center justify-between flex-wrap bg-white dark:bg-black p-6 w-screen">
+    <nav className="fixed top-0 flex border-solid border-pink-600 border-b shadow-xl lg:px-40 px-10 items-center justify-between flex-wrap bg-white dark:bg-black py-6 w-screen">
       <div className="flex items-center flex-shrink-0 text-pink-600">
         <Link href="/" as={`/`}>
 

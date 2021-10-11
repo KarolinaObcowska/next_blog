@@ -3,23 +3,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import MarkdownIt from 'markdown-it';
 
-const Post = ({ post: { title, date, author, content, image } }) => {
+const Post = ({ post: { title, date, content, image } }) => {
   const md = MarkdownIt();
   const htmlContent = md.render(content);
-  console.log(image)
+
   return (
-  <article className='overflow-visible bg-white my-32 md:px-28 px-6 dark:bg-black text-black dark:text-white'>
+  <article className='overflow-visible bg-white my-32 lg:px-40 px-10 dark:bg-black text-black dark:text-white'>
     <section>
     {image.length > 0 ? (
-        <img className="w-full object-cover" src={`http://localhost:1337${image[0].url}`} alt='image from post' />
+        <img className="w-full object-cover h-40" src={`http://localhost:1337${image[0].url}`} alt='image from post' />
       ) : (
         ''
-      )}       <h1 className='text-black dark:text-white'>{title}</h1>
+      )}       
+      <h1 className='text-black mt-5 text-3xl dark:text-white'>{title}</h1>
       <small className='text-black dark:text-white'>{date}</small>
-      <small className='text-black dark:text-white'>{author}</small>
     </section>
-    <section>
-      <p className='text-black break-all dark:text-white' dangerouslySetInnerHTML={{__html: htmlContent}}></p>
+    <section className='mt-5'>
+      <p className='text-gray-700 break-all dark:text-white' dangerouslySetInnerHTML={{__html: htmlContent}}></p>
     </section>
   </article>
   )
