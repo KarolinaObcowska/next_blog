@@ -1,28 +1,29 @@
 /* eslint-disable prefer-template */
 import React, { useState } from 'react'
 import Link from 'next/link'
-import Moon from '../images/moon.svg'
+import Image from 'next/image'
+
 const Navbar = ({ toggleMode, icon }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   
   return (
-    <nav className="transition duration-800 flex border-solid border-pink-600 border-b shadow-2xl items-center justify-between flex-wrap bg-white dark:bg-black p-6">
-      <div className="flex items-center flex-shrink-0 text-pink-600 ml-6">
+    <nav className="fixed top-0 flex border-solid border-pink-600 border-b shadow-xl md:px-28 items-center justify-between flex-wrap bg-white dark:bg-black p-6 w-screen">
+      <div className="flex items-center flex-shrink-0 text-pink-600">
         <Link href="/" as={`/`}>
 
-        <a className="font-light lg:text-5xl text-xl tracking-tight">
+        <a className="font-light lg:text-3xl text-xl tracking-tight">
           DailyJS.
         </a>
         </Link>
       </div>
-      <div className="block mr-6">
+      <div className="block">
         <button
           type="button"
           onClick={() => setNavbarOpen(!navbarOpen)}
           className="flex items-center px-2 py-2 border rounded text-teal-200 border-pink-600 text-pink-600 hover:border-pink-800 hover:text-pink-800"
         >
           <svg
-            className=" fill-current lg:h-7 lg:w-7 h-3 w-3"
+            className=" fill-current lg:h-4 lg:w-4 h-3 w-3"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -67,7 +68,7 @@ const Navbar = ({ toggleMode, icon }) => {
             onClick={toggleMode}
             className="block mt-4 mr-4 text-pink-500"
           >
-            <img src={icon} />
+            <Image src={icon} width='25' height='25'/>
           </button>
         </div>
       </div>

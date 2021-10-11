@@ -1,18 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-import Navbar from '../../components/Navbar'
+
 const Posts = ({ posts }) => (
-  <>
-    <Navbar />
+  <div className='md:px-28 px-6 mt-28'>
     {posts.map((post) => (
-      <div key={post.id} sx={{ width: '33%', p: 2 }}>
+      <div key={post.id} className='bg-white dark:bg-black'>
         <Link key={post.id} href="/posts/[id]" as={`/posts/${post.id}`}>
           <a
             href={`/posts/${post.id}`}
             sx={{ textDecoration: 'none', cursor: 'pointer' }}
+            className='text-black dark:text-white'
           >
-            <div sx={{ variant: 'containers.card' }}>
+            <div>
               <strong>{post.title}</strong>
               <small>{post.date}</small>
               <p>{post.description}</p>
@@ -21,7 +21,7 @@ const Posts = ({ posts }) => (
         </Link>
       </div>
     ))}
-  </>
+  </div>
 )
 Posts.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.object),
