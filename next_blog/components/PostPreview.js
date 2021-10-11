@@ -2,9 +2,14 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const PostPreview = ({ post: { title, description, author, date, content } }) => (
+const PostPreview = ({ post: { title, description, author, date, content, image } }) => (
   <article className='bg-white dark:bg-black w-full'>
     <section>
+      {image.length > 0 ? (
+        <img className="w-full object-cover" src={`http://localhost:1337${image[0].url}`} alt='image from post' />
+        ) : (
+        ''
+      )} 
       <h3 className="text-black dark:text-white">{title}</h3>
       <p className="text-black dark:text-white">{description}</p>
     </section>
@@ -21,5 +26,6 @@ PostPreview.propTypes = {
   description: PropTypes.string,
   author: PropTypes.string,
   date: PropTypes.string,
+  image: PropTypes.string,
 }
 export default PostPreview

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import PropTypes from 'prop-types'
 import LatestPosts from '../components/LatestPosts'
+
 const Home = ({ posts }) => {
 
   return (

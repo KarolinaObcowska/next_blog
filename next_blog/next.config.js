@@ -6,5 +6,8 @@ module.exports = withImages({
   include: path.resolve(__dirname, 'src/images'),
   webpack(config, options) {
     return config
-  }
+  },
+  images: {
+    domains: ['localhost'],
+  },
 })
