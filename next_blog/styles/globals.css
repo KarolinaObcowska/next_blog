@@ -7,8 +7,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  transition: all 0.25s linear;
   font-family: 'Montserrat', sans-serif;
+}
+
+.dark {
+  background-color: #111827;
 }
 
 a {
@@ -18,8 +21,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-.dark {
-  background-color: black;
 }

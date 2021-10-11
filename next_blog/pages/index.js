@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import LatestPosts from '../components/LatestPosts'
 
 const Home = ({ posts }) => {
-
   return (
     <div>
       <Head>
@@ -11,7 +10,9 @@ const Home = ({ posts }) => {
         <link rel="icon" href="" />
       </Head>
       <main>
-        <LatestPosts posts={posts} />
+        <div>
+          <LatestPosts posts={posts} />
+        </div>
       </main>
     </div>
   )

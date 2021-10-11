@@ -5,25 +5,24 @@ import Image from 'next/image'
 
 const Navbar = ({ toggleMode, icon }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-  
+
   return (
-    <nav className="fixed top-0 flex border-solid border-pink-600 border-b shadow-xl lg:px-40 px-10 items-center justify-between flex-wrap bg-white dark:bg-black py-6 w-screen">
+    <nav className="fixed top-0 flex border-solid border-pink-600 border-b shadow-xl lg:px-52 px-10 items-center justify-between flex-wrap bg-white dark:bg-gray-900 py-6 w-screen">
       <div className="flex items-center flex-shrink-0 text-pink-600">
         <Link href="/" as={`/`}>
-
-        <a className="font-light lg:text-3xl text-xl tracking-tight">
-          DailyJS.
-        </a>
+          <a className="font-mono lg:text-3xl text-xl tracking-tight">
+            DailyJS.
+          </a>
         </Link>
       </div>
       <div className="block">
         <button
           type="button"
           onClick={() => setNavbarOpen(!navbarOpen)}
-          className="flex items-center px-2 py-2 border rounded text-teal-200 border-pink-600 text-pink-600 hover:border-pink-800 hover:text-pink-800"
+          className="flex items-center px-2 py-2 border text-teal-200 border-pink-600 text-pink-600 hover:border-pink-800 hover:text-pink-800"
         >
           <svg
-            className=" fill-current lg:h-4 lg:w-4 h-3 w-3"
+            className=" animate-pulse  fill-current lg:h-4 lg:w-4 h-3 w-3"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -34,9 +33,10 @@ const Navbar = ({ toggleMode, icon }) => {
       </div>
 
       <div
-        className={`bg-solid border-t border-pink-600 my-3 w-full flex-grow ${
+        className={`font-mono bg-solid border-t border-pink-600 my-3 w-full flex-grow ${
           navbarOpen ? 'block' : 'hidden'
         }`}
+        onClick={() => setNavbarOpen(!navbarOpen)}
       >
         <div className="text-sm items-center flex flex-col">
           <Link href="/posts" as={`/posts`}>
@@ -68,7 +68,7 @@ const Navbar = ({ toggleMode, icon }) => {
             onClick={toggleMode}
             className="block mt-4 mr-4 text-pink-500"
           >
-            <Image src={icon} width='25' height='25'/>
+            <Image src={icon} width="25" height="25" />
           </button>
         </div>
       </div>
