@@ -4,10 +4,10 @@ import React from 'react'
 import Link from 'next/link'
 
 const PostPreview = ({ post: { title, description, date, image, id } }) => (
-  <article className=' bg-white dark:bg-gray-900 w-full mb-5'>
+  <article className=' bg-white dark:bg-gray-900 w-full mb-10'>
     <section>
       {image.length > 0 ? (
-        <img className=" w-full h-40 object-cover" src={`http://localhost:1337${image[0].url}`} alt='image from post' />
+        <img className="transform hover:scale-105 ease-in-out duration-700 mb-4 w-full h-40 object-cover" src={`http://localhost:1337${image[0].url}`} alt='image from post' />
         ) : (
         ''
       )} 

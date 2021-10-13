@@ -8,7 +8,7 @@ const Post = ({ post: { title, date, content, image } }) => {
   const htmlContent = md.render(content)
 
   return (
-    <article className="overflow-visible bg-white my-32 lg:px-52 px-10 dark:bg-gray-900 text-black dark:text-white">
+    <article className="overflow-visible bg-white mt-10 mb-20 lg:px-52 px-10 dark:bg-gray-900 text-black dark:text-white">
       <section>
         {image.length > 0 ? (
           <img

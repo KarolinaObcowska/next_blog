@@ -13,7 +13,7 @@ const LatestPosts = ({ posts }) => {
     return latestPost.map((post) => <PostPreview key={post.id} post={post} />)
   }
   return (
-    <div className="lg:px-52 px-10 my-32 bg-white md:grid gap-6 md:grid-cols-2 lg:grid-cols-3 dark:bg-gray-900">
+    <div className="lg:px-52 px-10 mt-10 mb-20 bg-white md:grid gap-6 md:grid-cols-2 lg:grid-cols-3 dark:bg-gray-900">
       {renderPostPreviews()}
     </div>
   )

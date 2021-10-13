@@ -7,7 +7,7 @@ const Navbar = ({ toggleMode, icon }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 flex border-solid border-pink-600 border-b shadow-xl lg:px-52 px-10 items-center justify-between flex-wrap bg-white dark:bg-gray-900 py-6 w-screen">
+    <nav className="sticky top-0 flex border-solid border-pink-600 border-b shadow-xl lg:px-52 px-10 items-center justify-between flex-wrap bg-white dark:bg-gray-900 py-6 w-screen">
       <div className="flex items-center flex-shrink-0 text-pink-600">
         <Link href="/" as={`/`}>
           <a className="font-mono lg:text-3xl text-xl tracking-tight">
