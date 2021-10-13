@@ -19,7 +19,9 @@ const Post = ({ post: { title, date, content, image } }) => {
         ) : (
           ''
         )}
-        <h1 className="font-mono text-black mt-5 text-3xl dark:text-white">{title}</h1>
+        <h1 className="font-mono text-black mt-5 text-3xl dark:text-white">
+          {title}
+        </h1>
         <small className="font-mono text-black dark:text-white">{date}</small>
       </section>
       <section className="mt-5">

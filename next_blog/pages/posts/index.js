@@ -5,10 +5,7 @@ import PropTypes from 'prop-types'
 const Posts = ({ posts }) => (
   <div className="lg:px-52 px-10 mt-10 mb-20 md:grid gap-6 md:grid-cols-2 lg:grid-cols-3">
     {posts.map((post) => (
-      <article
-        key={post.id}
-        className="bg-white dark:bg-gray-900 w-full mb-10"
-      >
+      <article key={post.id} className="bg-white dark:bg-gray-900 w-full mb-10">
         <section>
           {post.image.length > 0 ? (
             <img
@@ -20,15 +17,11 @@ const Posts = ({ posts }) => (
             ''
           )}
           <Link href="/posts/[id]" as={`/posts/${post.id}`}>
-            <a
-              href={`/posts/${post.id}`}
-              sx={{ textDecoration: 'none', cursor: 'pointer' }}
-              className="text-black dark:text-white"
-            >
-              <h2 className="font-mono text-xl mt-3 text-black dark:text-white">
+            <a href={`/posts/${post.id}`}>
+              <h2 className="font-mono text-xl mt-3 text-gray-800 dark:text-white">
                 {post.title}{' '}
               </h2>
-              <small className="font-mono text-black dark:text-white">
+              <small className="font-mono text-gray-800 dark:text-white">
                 {post.date}
               </small>
               <p className="font-normal text-gray-700 mt-3 dark:text-white">
